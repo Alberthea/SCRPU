@@ -12,7 +12,7 @@
 
 <form method="POST" action="?c=class04inspeccion&m=agregarTra">
           <div class="form-group">
-            <h4>Realizando estudio al trámite</h4>
+            <h4>Realizando estudio al trámite:</h4>
 
 <div class="col-xs-2">
   <input type="text" class="form-control" id="id" name="id" value="<?php echo $this->pu04inspeccion->getAtributo('PU04IDTRA');?>"  readonly> <?php  $idtramite = $this->pu04inspeccion->getAtributo('PU04IDTRA'); ?>
@@ -39,6 +39,8 @@
       </div>
 
 <button type="submit" class="btn btn-success ">Guardar</button>
+ 
+      <a href="?c=class04inspeccion&m=terminarInspeccion" class="btn btn-success" role="button">Terminar Inspección</a> 
           <br>
 
        </div>
@@ -256,11 +258,13 @@
           <br>
         </form>
     </div>
-
+   
 
 
   </div>
 </div>
+
+
 <br/>
 <div id="nested-tabInfo2">
    Tab Seleccionado: <span class="tabName"></span>

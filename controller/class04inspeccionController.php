@@ -34,6 +34,24 @@ class class04inspeccionController
 		require_once 'view/class04inspeccion/index1.php';
 		require_once 'view/footer.php';
 	}
+	public function terminarInspeccion()
+	{
+		if($_POST){
+			$this->pu04inspeccion->setAtributo('PU04IDTRA',$_POST['id']);
+			$this->pu04inspeccion->guardarInspeccion();
+			header('location:?c=class04inspeccion&m=agregarTra&id='.$_REQUEST['id']);
+			}
+		else{
+				
+		require_once 'view/header.php';
+		require_once 'view/class04inspeccion/index1.php';
+		require_once 'view/footer.php';
+		}
+		
+	}
+
+
+		
 	public function agregar()
 	{
 		if($_POST){

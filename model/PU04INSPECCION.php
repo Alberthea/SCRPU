@@ -25,6 +25,11 @@ class PU04INSPECCION extends Conexion
 		return $this->$nombre;
 	}
 
+	public function guardarInspeccion()
+	{
+		$sql = "call SP04_TRAMITEESTADO_GUARDAR('$this->PU04IDTRA');";
+		$this->conexion->consultaSimple($sql);
+	}	
 	
 	
  	
@@ -412,5 +417,6 @@ public function agregarTra()
 		$result = $this->conexion->consultaRetorno($sql);
 		return $result;	
 	}
+	
 }
 ?>
